@@ -1,7 +1,7 @@
 import * as yup from 'yup';
 
 const formSchema = yup.object().shape({
-    name: yup
+    first_name: yup
         .string()
         .trim()
         .required('A name is required!'),

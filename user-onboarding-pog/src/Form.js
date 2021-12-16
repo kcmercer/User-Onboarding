@@ -35,9 +35,9 @@ export default function UserForm(props) {
                 <h4> User Information </h4>
                 <label> First Name
                     <input
-                        value={values.name}
+                        value={values.first_name}
                         onChange={onChange}
-                        name='name'
+                        name='first_name'
                         type='text'
                     />
                 </label>
