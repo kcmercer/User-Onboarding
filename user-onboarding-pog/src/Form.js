@@ -9,8 +9,6 @@ const FormInput = styled.input`
     width: 80%;
 `
 
-
-
 export default function UserForm(props) {
     const {
         values,
