@@ -14,6 +14,7 @@ describe('Form App', () => {
     const allErrors = () => cy.get('div[id="errors"]')
 
     describe('if these dont pass, panic', () => {
+
         it('heres hoping', () => {
             expect(1 + 2).to.equal(3); // strict
             expect(2 + 2).not.to.equal(5);  // strict
@@ -28,7 +29,9 @@ describe('Form App', () => {
             inputTos().should('exist');
         })
     })
+
     describe('all fields work', () => {
+
         it('inputs can take text', () => {
             inputFirstName()
                 .should('have.value', '')
@@ -58,7 +61,9 @@ describe('Form App', () => {
                 .should('be.disabled')
         })
     })
+    
     describe('final tests', () => {
+
         it('validation error occurs', () => {
             inputTos()
                 .check()
@@ -67,6 +72,7 @@ describe('Form App', () => {
                 .contains('Please read and accept our Terms of Service!')
                 
         })
+
         it('button enabled when required fields filled', () => {
             inputFirstName()
                 .type('Smitty')
