@@ -34,7 +34,7 @@ export default function UserForm(props) {
             <div className='form-group submit'>
                 <h2> Register New User </h2>
 
-                <button disabled={disabled}> Register! </button>
+                <button className='submit' disabled={disabled}> Register! </button>
 
                 <div className='errors'>
                 <div>{errors.first_name}</div>
