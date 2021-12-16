@@ -27,7 +27,8 @@ export default function UserForm(props) {
 
                 <button disabled={disabled}> Register! </button>
 
-                <div className='errors'></div>
+                <div className='errors'>
+                </div>
 
             </div>
             <div className='form-group inputs'>
@@ -36,7 +37,7 @@ export default function UserForm(props) {
                     <input
                         value={values.name}
                         onChange={onChange}
-                        name='first_name'
+                        name='name'
                         type='text'
                     />
                 </label>
