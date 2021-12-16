@@ -1,4 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const FormDiv = styled.div`
+    justify-content: space-around;
+    display: flex;
+`
+const FormInput = styled.input`
+    width: 80%;
+`
+
+
 
 export default function UserForm(props) {
     const {
@@ -35,10 +46,9 @@ export default function UserForm(props) {
                 </div>
 
             </div>
-            <div className='form-group inputs'>
-                <h4> User Information </h4>
+            <FormDiv className='form-group inputs'>
                 <label> First Name
-                    <input
+                    <FormInput
                         value={values.first_name}
                         onChange={onChange}
                         name='first_name'
@@ -47,7 +57,7 @@ export default function UserForm(props) {
                 </label>
 
                 <label> Email Address
-                    <input
+                    <FormInput
                         value={values.email}
                         onChange={onChange}
                         name='email'
@@ -56,7 +66,7 @@ export default function UserForm(props) {
                 </label>
 
                 <label> Password
-                    <input
+                    <FormInput
                         value={values.password}
                         onChange={onChange}
                         name='password'
@@ -65,14 +75,14 @@ export default function UserForm(props) {
                 </label>
 
                 <label> Please Agree to our Terms of Service
-                    <input
+                    <FormInput
                         onChange={onChange}
                         name='tos'
                         type='checkbox'
                         checked={values.tos}
                     />
                 </label>
-            </div>
+            </FormDiv>
         </form>
     )
 }
