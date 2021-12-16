@@ -28,6 +28,10 @@ export default function UserForm(props) {
                 <button disabled={disabled}> Register! </button>
 
                 <div className='errors'>
+                <div>{errors.first_name}</div>
+                <div>{errors.email}</div>
+                <div>{errors.password}</div>
+                <div>{errors.tos}</div> 
                 </div>
 
             </div>

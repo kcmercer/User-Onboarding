@@ -34,18 +34,18 @@ function App() {
   const getNewUser = () => {
     axios.get('https://reqres.in/api/users')
       .then(resp => {
-        console.log(resp.data.data);
+        // console.log(resp.data.data);
         setUser(resp.data.data);
       }).catch(error => console.error(error))
   }
 
   // console.log(getNewUser());
-  console.log(formValues);
+  // console.log(formValues);
   const postNewUser = newUser => {
     axios.post('https://reqres.in/api/users', newUser )
     .then(resp => {
-      console.log(resp.data.data);
-      setUser([resp.data.data, ...user ]);
+      console.log(resp.data);
+      setUser([resp.data, ...user ]);
     }).catch(error => console.log(error))
     .finally(() => setFormValues(initialFormValues))
   }
